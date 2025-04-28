@@ -1,3 +1,5 @@
+// Importing the authentication routes from the auth.route.js file
+import authRoutes from './routes/auth.route.js';
 // Importing the Express library, which is used to create a web server in Node.js
 import express from 'express';
 
@@ -9,3 +11,5 @@ const app = express();
 app.listen(5001, () => {
   console.log('Server is running on port 5001'); // Logs a message to the console to confirm the server is running
 });
+
+app.use('/api/auth', authRoutes); // This line is commented out, but it would typically handle authentication routes
