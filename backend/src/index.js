@@ -6,10 +6,10 @@ import express from 'express';
 // Creating an instance of an Express application
 const app = express();
 
+app.use('/api/auth', authRoutes);
+
 // Starting the server and making it listen on port 5001
 // The callback function runs when the server starts successfully
 app.listen(5001, () => {
   console.log('Server is running on port 5001'); // Logs a message to the console to confirm the server is running
 });
-
-app.use('/api/auth', authRoutes); // This line is commented out, but it would typically handle authentication routes
